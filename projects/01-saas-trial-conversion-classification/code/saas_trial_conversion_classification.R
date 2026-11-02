@@ -144,6 +144,8 @@ confusion_05 <- table(
 confusion_05
 
 #3c
+library(pROC)
+
 roc_curve <- roc(
   test$upgraded,
   test_prob,
