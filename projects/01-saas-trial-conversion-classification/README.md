@@ -41,16 +41,19 @@ compared head-to-head.
 ## Packages
 
 Base R plus `MASS` (LDA), `FNN` (KNN), and `pROC` (the ROC curve and
-optimal-cutoff code — loaded in the author's session; add
-`library(pROC)` if you run the file standalone).
+optimal-cutoff code).
 
 ## Notes on the file in this repo
 
 The script is the author's original (submitted as `Rcodes_AMLIBHW1.R`),
-renamed to match this series' naming. No code was changed. The middle of
-the file rebuilds the train/test split from the raw CSV a second time —
-that is how the original was written, and it is harmless because the
-preparation steps are deterministic.
+renamed to match this series' naming, with exactly one repair: the
+original used `pROC`'s `roc()` and `coords()` without loading the
+package (it was loaded in the author's RStudio session), so
+`library(pROC)` was added at section 3c to make the file run standalone.
+Nothing else was changed. The middle of the file rebuilds the train/test
+split from the raw CSV a second time — that is how the original was
+written, and it is harmless because the preparation steps are
+deterministic.
 
 ## Status
 
